@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет — BestGames</title>
+  <meta name="description" content="Личный кабинет пользователя: данные профиля, история покупок и настройки темы.">
+  <link rel="preload" as="image" href="img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo link">
+        <img src="img/logo.svg" alt="Логотип BestGames" class="header__logo-img" width="200" height="60">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="index.html" class="nav__link link">Главная</a></li>
+          <li class="nav__item"><a href="catalog.html" class="nav__link link">Каталог игр</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="btn btn--outline header__btn link">Выйти</a>
+    </div>
+  </header>
+
+  <main class="profile-page">
+    <div class="container profile-page__container">
+      <h1 class="profile-page__title">Личный кабинет</h1>
+      <div class="profile-grid">
+        <!-- Блок данных профиля -->
+        <div class="profile-card">
+          <h2 class="profile-card__title">Данные профиля</h2>
+          <form id="profileForm" class="profile-card__form" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="profEmail">E-mail <span class="form__req">*</span></label>
+              <input type="email" id="profEmail" name="email" class="form__input" value="user@example.com" readonly>
+            </div>
+            <div class="form__group form__group--row">
+              <div class="form__half">
+                <label class="form__label" for="profFirstName">Имя <span class="form__req">*</span></label>
+                <input type="text" id="profFirstName" name="first_name" class="form__input" placeholder="Имя" required>
+              </div>
+              <div class="form__half">
+                <label class="form__label" for="profLastName">Фамилия <span class="form__req">*</span></label>
+                <input type="text" id="profLastName" name="last_name" class="form__input" placeholder="Фамилия" required>
+              </div>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="profBirthDate">Дата рождения <span class="form__req">*</span></label>
+              <input type="date" id="profBirthDate" name="birth_date" class="form__input" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="profPhone">Телефон <span class="form__req">*</span></label>
+              <input type="tel" id="profPhone" name="phone" class="form__input" placeholder="+7 (___) ___-__-__" required>
+            </div>
+            <div class="form__actions">
+              <button type="submit" class="btn btn--primary link">Сохранить изменения</button>
+            </div>
+          </form>
+          <div class="profile-card__actions mt">
+            <button class="btn btn--outline link" id="changePasswordBtn">Сменить пароль</button>
+            <button class="btn btn--outline link theme-toggle" id="themeToggle">Сменить тему (тёмная/светлая)</button>
+          </div>
+        </div>
+
+        <!-- История покупок -->
+        <div class="profile-card purchases-card">
+          <h2 class="profile-card__title">История покупок</h2>
+          <div class="purchases-list" id="purchasesList">
+            <!-- Записи заказов подставляются скриптом js/main.js -->
+            <p class="purchases-list__empty">У вас пока нет покупок. Перейдите в каталог, чтобы выбрать игру.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__contacts">
+        <h3 class="footer__contacts-title visually-hidden">Контакты</h3>
+        <a href="tel:88009995599" class="footer__phone link">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru" class="footer__email link">best@games.ru</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 BestGames. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

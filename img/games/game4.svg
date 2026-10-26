@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="g4Title" aria-describedby="g4Desc">
+  <title id="g4Title">Обложка игры Speed Rivals</title>
+  <desc id="g4Desc">Стилизованная обложка гоночной игры: гоночный автомобиль и гоночная трасса</desc>
+  <rect width="400" height="300" fill="#0f172a"/>
+  <path d="M 40 220 Q 200 240 360 220 T 40 220" fill="none" stroke="#334155" stroke-width="10" stroke-linecap="round"/>
+  <rect x="130" y="130" width="140" height="70" rx="10" fill="#ef4444" stroke="#b91c1c" stroke-width="2"/>
+  <circle cx="150" cy="200" r="16" fill="#1e293b" stroke="#475569" stroke-width="3"/>
+  <circle cx="250" cy="200" r="16" fill="#1e293b" stroke="#475569" stroke-width="3"/>
+  <text x="200" y="265" font-family="'Open Sans', sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">Speed Rivals</text>
+</svg>

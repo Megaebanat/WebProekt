@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация — BestGames</title>
+  <meta name="description" content="Регистрация нового пользователя в интернет-магазине BestGames.">
+  <link rel="preload" as="image" href="img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo link">
+        <img src="img/logo.svg" alt="Логотип BestGames" class="header__logo-img" width="200" height="60">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="index.html" class="nav__link link">Главная</a></li>
+          <li class="nav__item"><a href="catalog.html" class="nav__link link">Каталог игр</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="btn btn--outline header__btn link">Войти</a>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="container auth-page__container">
+      <div class="auth-card">
+        <div class="auth-card__brand">
+          <img src="img/logo.svg" alt="Логотип BestGames" class="auth-card__logo" width="160" height="48">
+          <h2 class="auth-card__title">Регистрация</h2>
+          <p class="auth-card__desc">Создайте аккаунт, чтобы покупать игры и отслеживать историю заказов.</p>
+        </div>
+        <form id="registerForm" class="auth-card__form" action="api/register.php" method="POST" novalidate>
+          <div class="form__group form__group--row">
+            <div class="form__half">
+              <label class="form__label" for="regLastName">Фамилия <span class="form__req">*</span></label>
+              <input type="text" id="regLastName" name="last_name" class="form__input" placeholder="Иванов" required>
+            </div>
+            <div class="form__half">
+              <label class="form__label" for="regFirstName">Имя <span class="form__req">*</span></label>
+              <input type="text" id="regFirstName" name="first_name" class="form__input" placeholder="Иван" required>
+            </div>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="regEmail">E-mail <span class="form__req">*</span></label>
+            <input type="email" id="regEmail" name="email" class="form__input" placeholder="name@example.com" autocomplete="email" required>
+            <span class="form__error" id="regEmailError" aria-live="polite"></span>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="regBirthDate">Дата рождения <span class="form__req">*</span></label>
+            <input type="date" id="regBirthDate" name="birth_date" class="form__input" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="regPhone">Телефон <span class="form__req">*</span></label>
+            <input type="tel" id="regPhone" name="phone" class="form__input" placeholder="+7 (___) ___-__-__" required>
+            <span class="form__error" id="regPhoneError" aria-live="polite"></span>
+          </div>
+          <div class="form__group form__group--password">
+            <label class="form__label" for="regPassword">Пароль <span class="form__req">*</span></label>
+            <input type="password" id="regPassword" name="password" class="form__input"
+                   placeholder="••••••••" autocomplete="new-password" required minlength="3">
+            <span class="form__error" id="regPasswordError" aria-live="polite"></span>
+            <span class="form__hint">Минимум 3 символа. Допустимые спецсимволы: _ # ! %</span>
+          </div>
+          <div class="form__group form__group--password">
+            <label class="form__label" for="regPasswordRepeat">Повтор пароля <span class="form__req">*</span></label>
+            <input type="password" id="regPasswordRepeat" name="password_repeat" class="form__input"
+                   placeholder="••••••••" autocomplete="new-password" required>
+            <span class="form__error" id="regPasswordRepeatError" aria-live="polite"></span>
+          </div>
+          <div class="form__group form__group--checkbox">
+            <input type="checkbox" id="regConsent" name="consent" class="form__checkbox" required>
+            <label class="form__label form__label--checkbox" for="regConsent">
+              Я даю согласие на обработку персональных данных
+            </label>
+            <span class="form__error" id="regConsentError" aria-live="polite"></span>
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary btn--full auth-card__btn link">Зарегистрироваться</button>
+          </div>
+          <p class="auth-card__footer-text">
+            Уже есть аккаунт? <a href="login.html" class="link link--inline">Войти</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__contacts">
+        <h3 class="footer__contacts-title visually-hidden">Контакты</h3>
+        <a href="tel:88009995599" class="footer__phone link">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru" class="footer__email link">best@games.ru</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 BestGames. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

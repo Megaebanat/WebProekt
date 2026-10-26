@@ -1,0 +1,175 @@
+/* ==========================================================================
+   BestGames — адаптивность (медиазапросы)
+   Контрольные точки: 360px (мобильный), 768px (планшет), 1920px (широкий десктоп).
+   ========================================================================== */
+
+/* Базовые стили уже ориентированы на мобильные (контейнер padding 1rem,
+   один столбец карточек, бургер-меню). Здесь уточняем отображение
+   на больших экранах и планшетах. */
+
+/* ----- Планшет и выше (от 768px) ----- */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 2rem;
+  }
+
+  .header__container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-wrap: nowrap;
+  }
+
+  .header__nav {
+    display: block;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .hero {
+    padding: 6rem 0 5rem;
+  }
+
+  .hero__container {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero__content {
+    max-width: 520px;
+  }
+
+  .hero__title {
+    font-size: 3.2rem;
+  }
+
+  .hero__desc {
+    font-size: 1.2rem;
+  }
+
+  .hero__slider {
+    margin: 0;
+    max-width: none;
+  }
+
+  .slider__track {
+    gap: 1.5rem;
+  }
+
+  .slider__slide {
+    width: min(300px, 100%);
+  }
+
+  .slider__img {
+    height: 220px;
+  }
+
+  .search__form {
+    gap: 1rem;
+  }
+
+  .advantages__list {
+    gap: 2rem;
+    justify-content: flex-start;
+  }
+
+  .advantages__item {
+    flex: 0 0 auto;
+    width: 250px;
+    max-width: none;
+    padding: 2rem;
+  }
+
+  .catalog__grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+
+  .card__img {
+    height: 240px;
+  }
+
+  .partners__grid {
+    gap: 2.5rem;
+  }
+
+  .footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__brand,
+  .footer__contacts {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .profile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .admin-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .auth-page {
+    padding: 3rem 0;
+  }
+}
+
+/* ----- Широкий десктоп (от 1920px) ----- */
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1600px;
+  }
+
+  .hero__title {
+    font-size: 4rem;
+  }
+
+  .advantages__title,
+  .catalog__title,
+  .catalog-page__title,
+  .partners__title,
+  .profile-page__title,
+  .admin-header__title {
+    font-size: 2.2rem;
+  }
+
+  .catalog__grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+
+  .card__img {
+    height: 260px;
+  }
+}
+
+/* ----- Мелкие экраны (до 360px) ----- */
+@media (max-width: 360px) {
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .slider__slide {
+    width: min(220px, 100%);
+  }
+
+  .card__img {
+    height: 160px;
+  }
+
+  .auth-card,
+  .profile-card,
+  .admin-card {
+    padding: 1.25rem;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог игр — BestGames</title>
+  <meta name="description" content="Каталог видеоигр BestGames с фильтрацией по жанрам.">
+  <link rel="preload" as="image" href="img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo link">
+        <img src="img/logo.svg" alt="Логотип BestGames" class="header__logo-img" width="200" height="60">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="index.html" class="nav__link link">Главная</a></li>
+          <li class="nav__item"><a href="catalog.html" class="nav__link link active">Каталог игр</a></li>
+          <li class="nav__item"><a href="login.html" class="nav__link link">Войти</a></li>
+        </ul>
+      </nav>
+      <a href="profile.html" class="btn btn--outline header__btn link">Личный кабинет</a>
+    </div>
+  </header>
+
+  <main class="catalog-page">
+    <div class="container catalog-page__container">
+      <h1 class="catalog-page__title">Каталог игр</h1>
+      <!-- Фильтрация по жанрам (десктопная версия) -->
+      <div class="catalog-filters" id="catalogFilters">
+        <h2 class="catalog-filters__title visually-hidden">Фильтрация по жанрам</h2>
+        <button class="filter-btn filter-btn--active" data-genre="all">Все жанры</button>
+        <button class="filter-btn" data-genre="action">Экшен</button>
+        <button class="filter-btn" data-genre="rpg">RPG</button>
+        <button class="filter-btn" data-genre="racing">Гонки</button>
+        <button class="filter-btn" data-genre="adventure">Приключения</button>
+        <button class="filter-btn" data-genre="indie">Инди</button>
+      </div>
+      <p class="catalog-filters__hint" id="filterHint">Показаны все игры. Нажмите на жанр для фильтрации.</p>
+      <ul class="catalog__grid list-reset" id="catalogGrid">
+        <!-- Карточки игр подставляются скриптом js/catalog.js -->
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <img src="img/logo.svg" alt="Логотип BestGames" class="footer__logo" width="180" height="54">
+        <p class="footer__slogan">Лицензионные видеоигры с доставкой ключа в течение минуты.</p>
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__nav-list list-reset">
+          <li class="footer__nav-item"><a href="index.html" class="footer__nav-link link">Главная</a></li>
+          <li class="footer__nav-item"><a href="catalog.html" class="footer__nav-link link">Каталог игр</a></li>
+          <li class="footer__nav-item"><a href="login.html" class="footer__nav-link link">Войти</a></li>
+          <li class="footer__nav-item"><a href="profile.html" class="footer__nav-link link">Личный кабинет</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contacts">
+        <h3 class="footer__contacts-title">Контакты</h3>
+        <a href="tel:88009995599" class="footer__phone link">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru" class="footer__email link">best@games.ru</a>
+        <p class="footer__copy">&copy; 2026 BestGames. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

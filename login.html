@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход — BestGames</title>
+  <meta name="description" content="Авторизация пользователя в интернет-магазине BestGames.">
+  <link rel="preload" as="image" href="img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo link">
+        <img src="img/logo.svg" alt="Логотип BestGames" class="header__logo-img" width="200" height="60">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="index.html" class="nav__link link">Главная</a></li>
+          <li class="nav__item"><a href="catalog.html" class="nav__link link">Каталог игр</a></li>
+        </ul>
+      </nav>
+      <a href="register.html" class="btn btn--outline header__btn link">Регистрация</a>
+    </div>
+  </header>
+
+  <main class="auth-page">
+    <div class="container auth-page__container">
+      <div class="auth-card">
+        <div class="auth-card__brand">
+          <img src="img/logo.svg" alt="Логотип BestGames" class="auth-card__logo" width="160" height="48">
+          <h2 class="auth-card__title">Вход в личный кабинет</h2>
+          <p class="auth-card__desc">Введите свой e-mail и пароль, чтобы войти на сайт.</p>
+        </div>
+        <form id="loginForm" class="auth-card__form" action="api/login.php" method="POST" novalidate>
+          <div class="form__group">
+            <label class="form__label" for="loginEmail">E-mail <span class="form__req">*</span></label>
+            <input type="email" id="loginEmail" name="email" class="form__input"
+                   placeholder="name@example.com" autocomplete="email" required>
+            <span class="form__error" id="loginEmailError" aria-live="polite"></span>
+          </div>
+          <div class="form__group form__group--password">
+            <label class="form__label" for="loginPassword">Пароль <span class="form__req">*</span></label>
+            <input type="password" id="loginPassword" name="password" class="form__input"
+                   placeholder="••••••••" autocomplete="current-password" required minlength="3">
+            <span class="form__error" id="loginPasswordError" aria-live="polite"></span>
+          </div>
+          <div class="form__actions">
+            <button type="submit" class="btn btn--primary btn--full auth-card__btn link">Войти</button>
+          </div>
+          <p class="auth-card__footer-text">
+            Нет аккаунта? <a href="register.html" class="link link--inline">Создать аккаунт</a>
+          </p>
+          <p class="auth-card__footer-text">
+            <a href="#" class="link link--inline">Забыли пароль?</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__contacts">
+        <h3 class="footer__contacts-title visually-hidden">Контакты</h3>
+        <a href="tel:88009995599" class="footer__phone link">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru" class="footer__email link">best@games.ru</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 BestGames. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

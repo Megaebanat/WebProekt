@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 60" role="img" aria-labelledby="p1Title" aria-describedby="p1Desc">
+  <title id="p1Title">Логотип партнёра PlayStation</title>
+  <desc id="p1Desc">Стилизованный логотип партнёра PlayStation</desc>
+  <rect width="160" height="60" fill="#ffffff" rx="8"/>
+  <path d="M 40 20 Q 40 40 60 40 Q 80 40 80 20 Q 80 0 60 0 Q 40 0 40 20 Z" fill="#004499"/>
+  <path d="M 100 20 Q 100 40 120 40 Q 140 40 140 20 Q 140 0 120 0 Q 100 0 100 20 Z" fill="#e31837"/>
+</svg>

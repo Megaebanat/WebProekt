@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="g6Title" aria-describedby="g6Desc">
+  <title id="g6Title">Обложка игры Pixel Dungeon</title>
+  <desc id="g6Desc">Стилизованная обложка пиксельной подземелья-игры: пиксельный герой и лабиринт</desc>
+  <rect width="400" height="300" fill="#1e293b"/>
+  <rect x="160" y="100" width="80" height="100" rx="4" fill="#334155" stroke="#475569" stroke-width="2"/>
+  <rect x="170" y="110" width="20" height="40" fill="#6366f1"/>
+  <rect x="200" y="110" width="20" height="40" fill="#a855f7"/>
+  <circle cx="170" cy="230" r="14" fill="#ef4444"/>
+  <circle cx="210" cy="230" r="14" fill="#fbbf24"/>
+  <text x="200" y="265" font-family="'Open Sans', sans-serif" font-size="19" font-weight="700" fill="#f8fafc" text-anchor="middle">Pixel Dungeon</text>
+</svg>

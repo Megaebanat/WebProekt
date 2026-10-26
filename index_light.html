@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BestGames — интернет-магазин видеоигр (светлая тема)</title>
+  <meta name="description" content="BestGames — светлая версия главной страницы интернет-магазина видеоигр.">
+  <link rel="preload" as="image" href="img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/light.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="theme-light">
+  <!-- ===== HEADER (светлая тема) ===== -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="index_light.html" class="header__logo link">
+        <img src="img/logo.svg" alt="Логотип BestGames" class="header__logo-img" width="200" height="60">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="index_light.html" class="nav__link link active">Главная</a></li>
+          <li class="nav__item"><a href="catalog.html" class="nav__link link">Каталог игр</a></li>
+          <li class="nav__item"><a href="login.html" class="nav__link link">Войти</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="profile.html" class="btn btn--outline header__btn link">Личный кабинет</a>
+        <button class="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-menu-light">
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-menu-light" hidden>
+      <div class="container mobile-nav__container">
+        <ul class="mobile-nav__list list-reset">
+          <li class="mobile-nav__item"><a href="index_light.html" class="mobile-nav__link link">Главная</a></li>
+          <li class="mobile-nav__item"><a href="catalog.html" class="mobile-nav__link link">Каталог игр</a></li>
+          <li class="mobile-nav__item"><a href="login.html" class="mobile-nav__link link">Войти</a></li>
+          <li class="mobile-nav__item"><a href="profile.html" class="mobile-nav__link link">Личный кабинет</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HERO / СЛАЙДЕР ===== -->
+    <section class="hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title">Новинки игр в светлой теме BestGames</h1>
+          <p class="hero__desc">Все игры каталога доступны в светлом оформлении сайта. Удобная навигация и приятная для глаз цветовая гамма.</p>
+          <a href="catalog.html" class="btn btn--primary hero__btn link">Перейти в каталог</a>
+        </div>
+        <div class="hero__slider">
+          <div class="slider" aria-label="Слайдер новинок игр">
+            <div class="slider__track">
+              <div class="slider__slide">
+                <img src="img/games/game1.svg" alt="Игра Cyber Nexus 2077" class="slider__img">
+                <div class="slider__card">
+                  <h3 class="slider__title">Cyber Nexus 2077</h3>
+                  <p class="slider__price">2 999 ₽</p>
+                  <a href="catalog.html" class="btn btn--outline slider__btn link">Подробнее</a>
+                </div>
+              </div>
+              <div class="slider__slide">
+                <img src="img/games/game2.svg" alt="Игра Star Drift" class="slider__img">
+                <div class="slider__card">
+                  <h3 class="slider__title">Star Drift</h3>
+                  <p class="slider__price">1 799 ₽</p>
+                  <a href="catalog.html" class="btn btn--outline slider__btn link">Подробнее</a>
+                </div>
+              </div>
+              <div class="slider__slide">
+                <img src="img/games/game3.svg" alt="Игра Realm of Magic" class="slider__img">
+                <div class="slider__card">
+                  <h3 class="slider__title">Realm of Magic</h3>
+                  <p class="slider__price">2 499 ₽</p>
+                  <a href="catalog.html" class="btn btn--outline slider__btn link">Подробнее</a>
+                </div>
+              </div>
+            </div>
+            <div class="slider__indicators" aria-label="Навигация слайдера">
+              <button class="slider__indicator slider__indicator--active" aria-label="Слайд 1 из 3" aria-current="true"></button>
+              <button class="slider__indicator" aria-label="Слайд 2 из 3"></button>
+              <button class="slider__indicator" aria-label="Слайд 3 из 3"></button>
+            </div>
+            <button class="slider__btn-prev slider__control" aria-label="Предыдущий слайд">&#10094;</button>
+            <button class="slider__btn-next slider__control" aria-label="Следующий слайд">&#10095;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== БЫСТРЫЙ ПОИСК ===== -->
+    <section class="search">
+      <div class="container search__container">
+        <h2 class="search__title visually-hidden">Быстрый поиск игр</h2>
+        <form class="search__form" action="catalog.html" method="GET" novalidate>
+          <label class="search__label" for="quick-search-light">Поиск игр</label>
+          <input type="search" id="quick-search-light" name="q" class="search__input"
+                 placeholder="Название игры, жанр, разработчик" aria-label="Поиск игр" required>
+          <button type="submit" class="btn btn--primary search__btn link">Найти</button>
+        </form>
+        <p class="search__hint">Подсказка: введите часть названия игры, жанр или имя разработчика.</p>
+      </div>
+    </section>
+
+    <!-- ===== ПРЕИМУЩЕСТВА ===== -->
+    <section class="advantages">
+      <div class="container advantages__container">
+        <h2 class="advantages__title">Почему выбирают BestGames</h2>
+        <ul class="advantages__list list-reset">
+          <li class="advantages__item">
+            <span class="advantages__emoji">&#128177;</span>
+            <h3 class="advantages__item-title">Привлекательные цены</h3>
+            <p class="advantages__item-text">Лицензионные ключи со скидками до 70 % от цены в других магазинах.</p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__emoji">&#128197;</span>
+            <h3 class="advantages__item-title">Ежемесячные акции</h3>
+            <p class="advantages__item-text">Регулярные распродажи и бесплатные раздачи игр.</p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__emoji">&#128205;</span>
+            <h3 class="advantages__item-title">Круглосуточная поддержка</h3>
+            <p class="advantages__item-text">Техническая поддержка работает без выходных.</p>
+          </li>
+          <li class="advantages__item">
+            <span class="advantages__emoji">&#128187;</span>
+            <h3 class="advantages__item-title">Быстрая покупка</h3>
+            <p class="advantages__item-text">Оформление заказа в два клика. Мгновенная доставка ключа на email.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== ПОПУЛЯРНЫЕ ИГРЫ ===== -->
+    <section class="catalog">
+      <div class="container catalog__container">
+        <div class="catalog__header">
+          <h2 class="catalog__title">Популярные игры</h2>
+          <a href="catalog.html" class="catalog__more link">Вся библиотека &rarr;</a>
+        </div>
+        <ul class="catalog__grid list-reset" id="catalogGridLight"></ul>
+      </div>
+    </section>
+
+    <!-- ===== ПАРТНЁРЫ ===== -->
+    <section class="partners">
+      <div class="container partners__container">
+        <h2 class="partners__title">Наши партнёры</h2>
+        <ul class="partners__list list-reset partners__grid">
+          <li class="partners__item"><img src="img/partners/partner1.svg" alt="Логотип партнёра PlayStation" class="partners__logo" width="160" height="60"></li>
+          <li class="partners__item"><img src="img/partners/partner2.svg" alt="Логотип партнёра Xbox" class="partners__logo" width="160" height="60"></li>
+          <li class="partners__item"><img src="img/partners/partner3.svg" alt="Логотип партнёра Nintendo" class="partners__logo" width="160" height="60"></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER (светлая тема) ===== -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__brand">
+        <img src="img/logo.svg" alt="Логотип BestGames" class="footer__logo" width="180" height="54">
+        <p class="footer__slogan">Лицензионные видеоигры с доставкой ключа в течение минуты.</p>
+      </div>
+      <nav class="footer__nav">
+        <ul class="footer__nav-list list-reset">
+          <li class="footer__nav-item"><a href="index_light.html" class="footer__nav-link link">Главная</a></li>
+          <li class="footer__nav-item"><a href="catalog.html" class="footer__nav-link link">Каталог игр</a></li>
+          <li class="footer__nav-item"><a href="login.html" class="footer__nav-link link">Войти</a></li>
+          <li class="footer__nav-item"><a href="register.html" class="footer__nav-link link">Регистрация</a></li>
+          <li class="footer__nav-item"><a href="profile.html" class="footer__nav-link link">Личный кабинет</a></li>
+        </ul>
+      </nav>
+      <div class="footer__contacts">
+        <h3 class="footer__contacts-title">Контакты</h3>
+        <a href="tel:88009995599" class="footer__phone link">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru" class="footer__email link">best@games.ru</a>
+        <p class="footer__copy">&copy; 2026 BestGames. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+/* ==========================================================================
+   BestGames — светлая тема (index_light.html)
+   Переопределяет переменные/цвета основного style.css.
+   Отличия от тёмной темы (минимум 4):
+     1. Фон страницы — светлый (#f8fafc вместо #0f172a).
+     2. Текст — тёмный (#0f172a вместо #f8fafc).
+     3. Карточки/панели — светло-серый (#ffffff) с тёмной рамкой.
+     4. Акцентный цвет кнопок сохранён, но текст в навигации — тёмный.
+   ========================================================================== */
+
+.theme-light {
+  color: #0f172a;
+  background-color: #f8fafc;
+}
+
+.theme-light .header {
+  background-color: #ffffff;
+  border-bottom-color: #e2e8f0;
+}
+
+.theme-light .nav__link {
+  color: #475569;
+}
+
+.theme-light .nav__link.active,
+.theme-light .nav__link:hover {
+  color: #6366f1;
+}
+
+.theme-light .header__btn {
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.theme-light .header__btn:hover {
+  border-color: #6366f1;
+  color: #ffffff;
+  background-color: #6366f1;
+}
+
+.theme-light .burger__line {
+  background-color: #0f172a;
+}
+
+.theme-light .mobile-nav {
+  background-color: #ffffff;
+  border-top-color: #e2e8f0;
+}
+
+.theme-light .mobile-nav__link {
+  color: #475569;
+  border-bottom-color: #e2e8f0;
+}
+
+.theme-light .mobile-nav__link:hover {
+  color: #6366f1;
+  background-color: #f1f5f9;
+}
+
+.theme-light .btn--outline {
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.theme-light .btn--outline:hover {
+  background-color: #6366f1;
+  color: #ffffff;
+}
+
+.theme-light .hero {
+  background: radial-gradient(circle at top right, #e2e8f0, #f8fafc);
+}
+
+.theme-light .hero__title,
+.theme-light .hero__desc {
+  color: #0f172a;
+}
+
+.theme-light .hero__desc {
+  color: #475569;
+}
+
+.theme-light .slider__slide {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.theme-light .slider__title {
+  color: #0f172a;
+}
+
+.theme-light .slider__price {
+  color: #b45309;
+}
+
+.theme-light .slider__card {
+  background: linear-gradient(to top, rgba(248, 250, 252, 0.95), transparent);
+}
+
+.theme-light .slider__control {
+  border-color: #e2e8f0;
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.theme-light .slider__control:hover {
+  background-color: #f1f5f9;
+  border-color: #6366f1;
+}
+
+.theme-light .search {
+  background-color: #f1f5f9;
+}
+
+.theme-light .search__input {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.theme-light .search__hint {
+  color: #64748b;
+}
+
+.theme-light .advantages__item {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.theme-light .advantages__item-title {
+  color: #0f172a;
+}
+
+.theme-light .advantages__item-text {
+  color: #475569;
+}
+
+.theme-light .catalog__title,
+.theme-light .catalog-page__title,
+.theme-light .advantages__title,
+.theme-light .partners__title,
+.theme-light .profile-page__title,
+.theme-light .admin-header__title {
+  color: #0f172a;
+}
+
+.theme-light .card,
+.theme-light .profile-card,
+.theme-light .admin-card,
+.theme-light .auth-card {
+  background-color: #ffffff;
+  border-color: #e2e8f0;
+}
+
+.theme-light .card__title,
+.theme-light .profile-card__title,
+.theme-light .admin-card__title,
+.theme-light .auth-card__title {
+  color: #0f172a;
+}
+
+.theme-light .card__meta,
+.theme-light .footer__slogan,
+.theme-light .auth-card__desc,
+.theme-light .admin-header__desc {
+  color: #64748b;
+}
+
+.theme-light .filter-btn {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #475569;
+}
+
+.theme-light .filter-btn--active {
+  background-color: #6366f1;
+  border-color: #6366f1;
+  color: #ffffff;
+}
+
+.theme-light .catalog-filters__hint {
+  color: #64748b;
+}
+
+.theme-light .footer {
+  background-color: #f1f5f9;
+  border-top-color: #e2e8f0;
+  color: #64748b;
+}
+
+.theme-light .footer__contacts-title {
+  color: #0f172a;
+}
+
+.theme-light .footer__nav-link {
+  color: #475569;
+}
+
+.theme-light .footer__phone,
+.theme-light .footer__email {
+  color: #6366f1;
+}
+
+.theme-light .footer__copy {
+  color: #94a3b8;
+}
+
+.theme-light .form__input {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.theme-light .form__label {
+  color: #475569;
+}
+
+.theme-light .form__error {
+  color: #dc2626;
+}
+
+.theme-light .auth-card__footer-text {
+  color: #475569;
+}
+
+.theme-light .purchases-list__empty {
+  color: #64748b;
+}
+
+.theme-light .admin-message--success {
+  background-color: #166534;
+  color: #bbf7d0;
+}
+
+.theme-light .admin-message--error {
+  background-color: #7f1d1d;
+  color: #fecaca;
+}

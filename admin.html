@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Админ-панель — BestGames</title>
+  <meta name="description" content="Административная панель управления каталогом игр интернет-магазина BestGames.">
+  <link rel="preload" as="image" href="img/logo.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="header__logo link">
+        <img src="img/logo.svg" alt="Логотип BestGames" class="header__logo-img" width="200" height="60">
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item"><a href="index.html" class="nav__link link">Главная</a></li>
+          <li class="nav__item"><a href="catalog.html" class="nav__link link">Каталог игр</a></li>
+          <li class="nav__item"><a href="login.html" class="nav__link link">Войти</a></li>
+        </ul>
+      </nav>
+      <a href="login.html" class="btn btn--outline header__btn link">Войти как администратор</a>
+    </div>
+  </header>
+
+  <main class="admin-page">
+    <div class="container admin-page__container">
+      <div class="admin-header">
+        <h1 class="admin-header__title">Админ-панель BestGames</h1>
+        <p class="admin-header__desc">Управление каталогом игр: добавление, редактирование и удаление позиций.</p>
+      </div>
+      <div class="admin-grid">
+        <!-- Форма добавления игры -->
+        <div class="admin-card add-game-card">
+          <h2 class="admin-card__title">Добавить игру</h2>
+          <form id="addGameForm" class="admin-card__form" novalidate>
+            <div class="form__group">
+              <label class="form__label" for="adminTitle">Название игры <span class="form__req">*</span></label>
+              <input type="text" id="adminTitle" name="title" class="form__input" placeholder="Cyber Nexus 2077" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="adminGenre">Жанр <span class="form__req">*</span></label>
+              <input type="text" id="adminGenre" name="genre" class="form__input" placeholder="Экшен / RPG / Гонки" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="adminDeveloper">Компания-разработчик <span class="form__req">*</span></label>
+              <input type="text" id="adminDeveloper" name="developer" class="form__input" placeholder="Название студии" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="adminDescription">Описание <span class="form__req">*</span></label>
+              <textarea id="adminDescription" name="description" class="form__input form__textarea" placeholder="Краткое описание игры" rows="3" required></textarea>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="adminPrice">Стоимость <span class="form__req">*</span></label>
+              <input type="number" id="adminPrice" name="price" class="form__input" min="0" placeholder="0" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="adminImage">Изображение (ссылка) <span class="form__req">*</span></label>
+              <input type="url" id="adminImage" name="image" class="form__input" placeholder="img/games/game1.svg" required>
+            </div>
+            <div class="form__actions">
+              <button type="submit" class="btn btn--primary btn--full admin-card__btn link">Добавить игру</button>
+            </div>
+          </form>
+          <div id="adminMessage" class="admin-message"></div>
+        </div>
+
+        <!-- Список игр (превью каталога) -->
+        <div class="admin-card games-list-card">
+          <h2 class="admin-card__title">Текущий каталог игр</h2>
+          <ul class="games-list list-reset" id="adminGamesList">
+            <!-- Игры подгружаются скриптом js/main.js -->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__contacts">
+        <h3 class="footer__contacts-title visually-hidden">Контакты</h3>
+        <a href="tel:88009995599" class="footer__phone link">8-800-999-55-99</a>
+        <a href="mailto:best@games.ru" class="footer__email link">best@games.ru</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 BestGames. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

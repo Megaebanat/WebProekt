@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img" aria-labelledby="g1Title" aria-describedby="g1Desc">
+  <title id="g1Title">Обложка игры Cyber Nexus 2077</title>
+  <desc id="g1Desc">Стилизованная обложка игры в жанре киберпанк: неоновый городской пейзаж и протагонист</desc>
+  <rect width="400" height="300" fill="#0f172a"/>
+  <rect x="80" y="60" width="240" height="180" rx="16" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <line x1="140" y1="100" x2="260" y2="100" stroke="#6366f1" stroke-width="4"/>
+  <line x1="140" y1="140" x2="200" y2="140" stroke="#a855f7" stroke-width="4"/>
+  <circle cx="180" cy="200" r="22" fill="#6366f1"/>
+  <circle cx="220" cy="200" r="22" fill="#a855f7"/>
+  <text x="200" y="270" font-family="'Open Sans', sans-serif" font-size="20" font-weight="700" fill="#f8fafc" text-anchor="middle">Cyber Nexus 2077</text>
+</svg>
