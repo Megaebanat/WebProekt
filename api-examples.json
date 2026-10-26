@@ -1,0 +1,56 @@
+{
+  "title": "Примеры запросов и ответов REST API BestGames",
+  "base_url": "{{api-host}} = {{site-url}}/school-api",
+  "examples": [
+    {
+      "name": "Регистрация пользователя",
+      "method": "POST",
+      "link": "/registr",
+      "headers": { "Content-Type": "application/json", "Accept": "application/json" },
+      "body": { "email": "name@example.com", "password": "password", "last_name": "Иванов", "first_name": "Иван", "birth_date": "2000-01-01", "phone": "+79001234567" },
+      "status": 201,
+      "response": { "success": true }
+    },
+    {
+      "name": "Авторизация",
+      "method": "POST",
+      "link": "/auth",
+      "headers": { "Content-Type": "application/json", "Accept": "application/json" },
+      "body": { "email": "name@example.com", "password": "password" },
+      "status": 200,
+      "response": { "token": "{Bearer-токен}" }
+    },
+    {
+      "name": "Список игр (каталог)",
+      "method": "GET",
+      "link": "/games",
+      "headers": { "Authorization": "Bearer {token}", "Accept": "application/json" },
+      "body": null,
+      "status": 200,
+      "response": {
+        "data": [
+          { "id": 1, "name": "Cyber Nexus 2077", "description": "...", "hours": null, "img": "img/games/game1.svg", "start_date": null, "end_date": null, "price": 2999 }
+        ],
+        "pagination": { "total": 6, "current": 1, "per_page": 10 }
+      }
+    },
+    {
+      "name": "Платёжный вебхук",
+      "method": "POST",
+      "link": "/payment-webhook",
+      "body": { "order_id": "{uuid}", "status": "success | failed" },
+      "status": 204,
+      "response": "пустое тело"
+    },
+    {
+      "name": "Ошибка валидации (422)",
+      "status": 422,
+      "response": { "message": "Invalid fields", "errors": { "field_name": ["Error message"] } }
+    },
+    {
+      "name": "Ошибка авторизации (403)",
+      "status": 403,
+      "response": { "message": "Forbidden for you" }
+    }
+  ]
+}
